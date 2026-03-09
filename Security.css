@@ -1,0 +1,228 @@
+.security-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem;
+}
+
+.security-card {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 440px;
+    padding: 2.5rem;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.security-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.security-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #eff6ff;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transform: rotate(3deg);
+}
+
+.security-icon-wrapper svg {
+    color: #2563eb;
+    transform: rotate(-3deg);
+}
+
+.security-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.security-header p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.security-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.security-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.security-input-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-left: 0.25rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon svg.left-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-with-icon input:focus {
+    background-color: white;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-with-icon input:focus+svg.left-icon {
+    color: #2563eb;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.password-toggle:hover {
+    color: #4b5563;
+}
+
+.password-requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.requirement-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    transition: background-color 0.2s;
+}
+
+.requirement-dot.valid {
+    background-color: #10b981;
+}
+
+.btn-security-submit {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-security-submit:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn-security-submit:active {
+    transform: translateY(0);
+}
+
+.btn-security-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.security-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    text-align: center;
+}
+
+.btn-cancel-logout {
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-cancel-logout:hover {
+    color: #374151;
+}
+
+.security-error {
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: #dc2626;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
